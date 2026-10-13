@@ -1,0 +1,50 @@
+
+PREDICTIVE CHURN ANALYSIS
+=========================
+
+1. PROJECT OBJECTIVE
+The objective is to predict whether a customer will leave
+a service using customer information.
+
+2. DATASET
+Dataset: customer_churn_model_v2.csv
+Total customers: 800
+Total columns: 13
+Input features used: 11
+Missing values: 0
+Duplicate rows: 0
+
+3. CHURN DISTRIBUTION
+Customers who stayed: 466
+Customers who churned: 334
+
+4. DATA PREPROCESSING
+- CustomerID excluded from model training.
+- Churn encoded as 0 (No) and 1 (Yes).
+- Categorical features processed using One-Hot Encoding.
+- Numerical features scaled using MinMaxScaler.
+- Dataset split into 80% training and 20% testing.
+- Preprocessing fitted on training data only.
+
+5. MACHINE LEARNING MODEL
+Algorithm: Random Forest Classifier
+Number of trees: 200
+Random state: 42
+Class weighting: Balanced
+
+6. MODEL EVALUATION
+Accuracy: 0.6062
+Precision: 0.5303
+Recall: 0.5224
+F1-Score: 0.5263
+ROC-AUC: 0.6456
+
+7. CONCLUSION
+The model demonstrates some ability to distinguish between
+customers who churn and those who stay. Its performance
+can be investigated further through model comparison,
+feature analysis, and hyperparameter tuning.
+
+The evaluation results describe performance on the held-out
+test dataset. Further validation is recommended before
+using the model for actual business decisions.
